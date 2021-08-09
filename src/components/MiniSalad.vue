@@ -44,7 +44,8 @@ export default {
   },
   computed: {
     loadImage() {
-      return require(`!!assets-loader?width=240!@images/${this.imagePath}`);
+      // TODO: 1カラムのとき画像の幅を大きくしたほうが良いかも
+      return require(`!!assets-loader?width=280!@images/${this.imagePath}`);
     }
   }
 };
@@ -52,7 +53,11 @@ export default {
 
 <style lang="scss" scoped>
 .salad-container {
-  padding: 1em;
+  padding: 2em;
+}
+
+.salad-image {
+  text-align: center;
 }
 
 // font-size

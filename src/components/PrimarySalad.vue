@@ -9,7 +9,7 @@
       <p class="salad-ingredients">{{ ingredients.join("/") }}</p>
     </div>
     <div class="salad-image">
-      <g-image :src="loadImage" height="400" width="400" />
+      <g-image :src="loadImage" />
     </div>
   </div>
 </template>
@@ -53,12 +53,25 @@ export default {
 <style lang="scss" scoped>
 .salad-container {
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: column-reverse;
+}
+@media (min-width: 768px) {
+  .salad-container {
+    flex-direction: row;
+  }
+
+  .salad-info {
+    flex: 1;
+    padding-top: 80px;
+  }
 }
 
-.salad-info {
-  padding-top: 80px;
+.salad-image {
+  text-align: center;
 }
 
+// font-size
 .salad-container {
   /deep/ .salad-name {
     font-size: 1.75rem;
