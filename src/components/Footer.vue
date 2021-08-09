@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <footer>
     <div class="qr-code">QRコード</div>
     <div class="logo">
       <p>SALAD SITE</p>
@@ -14,9 +14,16 @@
         <span> URL: https://example.com</span>
       </p>
     </div>
-  </div>
+  </footer>
 </template>
 
 <script>
 export default {};
 </script>
+
+<style lang="scss" scoped>
+footer {
+  background-color: #111111;
+  color: white;
+}
+</style>

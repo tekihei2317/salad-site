@@ -40,7 +40,7 @@ export default {
   },
   computed: {
     loadImage() {
-      return require(`!!assets-loader?width=240&height=240!@images/${this.imagePath}`);
+      return require(`!!assets-loader?width=240!@images/${this.imagePath}`);
     }
   }
 };
