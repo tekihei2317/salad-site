@@ -1,10 +1,11 @@
 <template>
   <div class="salad-container">
     <div class="salad-info">
-      <p>
+      <div>
         <span class="salad-name">{{ name }}</span>
-        <span class="salad-price"> {{ price }}円</span>
-      </p>
+        <span class="salad-price">¥{{ price }}</span>
+        <p class="salad-japanese-name">{{ japaneseName }}</p>
+      </div>
       <p class="salad-description">{{ description }}</p>
       <p class="salad-ingredients">{{ ingredients.join("/") }}</p>
     </div>
@@ -63,7 +64,7 @@ export default {
 
   .salad-info {
     flex: 1;
-    padding-top: 80px;
+    padding-top: 120px;
   }
 }
 
@@ -71,20 +72,32 @@ export default {
   text-align: center;
 }
 
-// font-size
+.salad-price {
+  margin-left: 16px;
+}
+
+.salad-japanese-name {
+  margin-top: 0px;
+}
+
+// font
 .salad-container {
   /deep/ .salad-name {
     font-size: 1.75rem;
+    font-weight: bold;
   }
-
   /deep/ .salad-price {
     font-size: 1.5rem;
+    font-weight: bold;
   }
-
+  /deep/ .salad-japanese-name {
+    font-size: 1rem;
+    font-weight: bold;
+  }
   /deep/ .salad-description {
-    font-size: 1.25rem;
+    font-size: 1rem;
+    font-weight: bold;
   }
-
   /deep/ .salad-ingredients {
     font-size: 1rem;
   }

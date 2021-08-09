@@ -4,10 +4,11 @@
       <g-image :src="loadImage" height="200" width="200" />
     </div>
     <div class="salad-info">
-      <p>
+      <div>
         <span class="salad-name">{{ name }}</span>
-        <span class="salad-price"> {{ price }}円</span>
-      </p>
+        <span class="salad-price">¥{{ price }}</span>
+        <p class="salad-japanese-name">{{ japaneseName }}</p>
+      </div>
       <p class="salad-description">{{ description }}</p>
       <p class="salad-ingredients">{{ ingredients.join("/") }}</p>
     </div>
@@ -60,20 +61,31 @@ export default {
   text-align: center;
 }
 
-// font-size
+.salad-price {
+  margin-left: 16px;
+}
+
+.salad-japanese-name {
+  margin-top: 0px;
+}
+// font
 .salad-container {
   /deep/ .salad-name {
     font-size: 1.5rem;
+    font-weight: bold;
   }
-
   /deep/ .salad-price {
     font-size: 1.25rem;
+    font-weight: bold;
   }
-
+  /deep/ .salad-japanese-name {
+    font-size: 0.85rem;
+    font-weight: bold;
+  }
   /deep/ .salad-description {
-    font-size: 1rem;
+    font-size: 0.9rem;
+    font-weight: bold;
   }
-
   /deep/ .salad-ingredients {
     font-size: 0.85rem;
   }

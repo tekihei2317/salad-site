@@ -46,7 +46,7 @@ export default {
   },
 
   metaInfo: {
-    title: "Hello, world!"
+    title: "Salad Site"
   },
 
   data() {
@@ -60,14 +60,18 @@ export default {
 
 <style lang="scss" scoped>
 .primary-text {
-  font-size: 2.5rem;
+  font-size: 2.75rem;
   text-align: center;
+  -webkit-text-stroke: 1.5px black;
+  letter-spacing: 0.5rem;
 
   &--highlighted {
-    font-size: 2.5rem;
+    font-size: 2.75rem;
     text-align: center;
     color: #4fae4f;
     margin-top: 16px;
+    -webkit-text-stroke: 1.5px #4fae4f;
+    letter-spacing: 0.5rem;
   }
 }
 
