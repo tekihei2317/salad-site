@@ -15,7 +15,7 @@ export const primarySalad = {
     "コーン",
     "フライドオニオン"
   ],
-  imagePath: "salad/makai-mart.png"
+  imagePath: "salad/mild-chicken-caesar.png"
 };
 
 export const saladList = [

@@ -60,7 +60,10 @@ export default {
 
 <style lang="scss" scoped>
 .primary-text {
+  font-size: 2.25rem;
+
   &--highlighted {
+    font-size: 2.25rem;
     color: #4fae4f;
   }
 }
