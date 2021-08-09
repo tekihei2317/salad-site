@@ -38,7 +38,6 @@ export default {
 html {
   font-size: 14px;
 }
-
 @media (min-width: 768px) {
   html {
     font-size: 16px;
@@ -50,12 +49,24 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.5;
-  background-color: #d5e4dc;
+  /* background-color: #d5e4dc; */
+  background-color: #cbd2d6;
+}
+
+h2 {
+  margin-bottom: 0px;
+  margin-top: 0px;
 }
 
 .layout {
-  max-width: 760px;
-  margin: 0 auto;
+  padding: 0 4% 0 4%;
+}
+@media (min-width: 768px) {
+  .layout {
+    max-width: 1000px;
+    padding: 0 20px 0 20px;
+    margin: 0 auto;
+  }
 }
 
 .header {
@@ -63,7 +74,7 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
-  height: 80px;
+  height: 40px;
 }
 
 .nav__link {

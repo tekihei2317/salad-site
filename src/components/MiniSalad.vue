@@ -1,12 +1,16 @@
 <template>
   <div class="salad-container">
-    <g-image :src="loadImage" height="200" width="200" />
-    <p>
-      <span class="salad-name">{{ name }}</span>
-      <span class="salad-price"> {{ price }}円</span>
-    </p>
-    <p class="salad-description">{{ description }}</p>
-    <p class="salad-ingredients">{{ ingredients.join("/") }}</p>
+    <div class="salad-image">
+      <g-image :src="loadImage" height="200" width="200" />
+    </div>
+    <div class="salad-info">
+      <p>
+        <span class="salad-name">{{ name }}</span>
+        <span class="salad-price"> {{ price }}円</span>
+      </p>
+      <p class="salad-description">{{ description }}</p>
+      <p class="salad-ingredients">{{ ingredients.join("/") }}</p>
+    </div>
   </div>
 </template>
 
@@ -47,6 +51,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.salad-container {
+  padding: 1em;
+}
+
+// font-size
 .salad-container {
   /deep/ .salad-name {
     font-size: 1.5rem;

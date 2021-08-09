@@ -60,11 +60,20 @@ export default {
 
 <style lang="scss" scoped>
 .primary-text {
-  font-size: 2.25rem;
+  font-size: 2.5rem;
+  text-align: center;
 
   &--highlighted {
-    font-size: 2.25rem;
+    font-size: 2.5rem;
+    text-align: center;
     color: #4fae4f;
+    margin-top: 16px;
   }
+}
+
+.salad-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: 1fr;
 }
 </style>
