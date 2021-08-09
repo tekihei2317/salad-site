@@ -29,7 +29,7 @@ export default {
   computed: {
     loadImage() {
       // TODO: 1カラムのとき画像の幅を大きくしたほうが良いかも
-      return require("!!assets-loader?width=280!@images/qr-code.png");
+      return require("!!assets-loader?width=280&blur=1!@images/qr-code.png");
     }
   }
 };

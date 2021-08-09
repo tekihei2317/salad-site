@@ -9,8 +9,8 @@
       <p class="salad-description">{{ description }}</p>
       <p class="salad-ingredients">{{ ingredients.join("/") }}</p>
     </div>
-    <div class="salad-image">
-      <g-image :src="loadImage" />
+    <div>
+      <img class="salad-image" :src="loadImage" />
     </div>
   </div>
 </template>
@@ -45,7 +45,7 @@ export default {
   },
   computed: {
     loadImage() {
-      return require(`!!assets-loader?width=480!@images/${this.imagePath}`);
+      return require(`../assets/images/${this.imagePath}`);
     }
   }
 };
@@ -67,9 +67,14 @@ export default {
     padding-top: 120px;
   }
 }
-
 .salad-image {
   text-align: center;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .salad-image {
+    width: 480px;
+  }
 }
 
 .salad-price {
